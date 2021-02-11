@@ -39,8 +39,8 @@ X, Y = numpy.meshgrid(xs, ys)
 Z = numpy.empty(shape=(N, N), dtype=numpy.double)
 W = numpy.empty(shape=(N, N), dtype=numpy.double)
 S = numpy.empty(shape=(N, N), dtype=numpy.double)
-for i in xrange(N):
-    for j in xrange(N):
+for i in range(N):
+    for j in range(N):
         strained = alloy(x=X[i, j], y=Y[i, j]).strained_001(GaSb)
         strain = strained.strain_out_of_plane(T=T)
         if False:#not (0. <= strain <= 0.03):

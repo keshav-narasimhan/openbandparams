@@ -27,4 +27,4 @@ from openbandparams import *
 # Print all references used to calculate a parameter
 parameter = InAsSb.Eg
 for ref in parameter.get_references():
-    print ref
+    print(ref)

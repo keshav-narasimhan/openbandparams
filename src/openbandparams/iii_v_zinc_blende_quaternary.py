@@ -156,7 +156,7 @@ class IIIVZincBlendeQuaternary(IIIVZincBlendeMixedAlloy):
     def _instance(self, x=None, y=None, z=None):
         instance = IIIVZincBlendeQuaternary(self.name, self.elements,
                                             self.ternaries, x=x, y=y, z=z)
-        for parameter in self._parameters.values():
+        for parameter in list(self._parameters.values()):
             instance.set_parameter(parameter)
         return instance
 

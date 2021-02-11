@@ -62,7 +62,7 @@ class IIIVZincBlendeTernary(IIIVZincBlendeMixedAlloy):
     def _instance(self, x=None):
         instance = IIIVZincBlendeTernary(self.name, self.elements,
                                          self.binaries, x=x)
-        for parameter in self._parameters.values():
+        for parameter in list(self._parameters.values()):
             instance.set_parameter(parameter)
         return instance
 

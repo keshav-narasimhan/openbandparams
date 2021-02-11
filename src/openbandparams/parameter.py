@@ -192,7 +192,7 @@ def method_parameter(dependencies, units,
         to the `parameters` dictionary, unless a `Parameter` with the same
         name has already been added.
         '''
-        name = method.func_name
+        name = method.__name__
         return MethodParameter(name, method, dependencies, units,
                                aliases, references)
     return decorator

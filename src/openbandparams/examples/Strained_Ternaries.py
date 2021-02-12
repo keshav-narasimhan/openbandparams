@@ -45,9 +45,9 @@ for parameter in ['CBO', 'VBO', 'Eg']:
     s = getattr(strained, parameter)()
     rows.append([parameter, '{:g}'.format(u), '{:g}'.format(s)])
 col_widths = [max([len(row[col]) for row in rows]) for col in range(num_cols)]
-import string
+# import string
 # print header
-print(' | '.join([string.ljust(rows[0][col],col_widths[col]) for col in range(num_cols)]))
+print(' | '.join([str.ljust(rows[0][col],col_widths[col]) for col in range(num_cols)]))
 print('-'*(sum(col_widths)+len(' | ')*(num_cols-1)))
 for row in rows[1:]:
-    print(' | '.join([string.ljust(row[col],col_widths[col]) for col in range(num_cols)]))
+    print(' | '.join([str.ljust(row[col],col_widths[col]) for col in range(num_cols)]))

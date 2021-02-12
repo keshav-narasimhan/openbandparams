@@ -23,7 +23,7 @@ import sys
 sys.path.insert(0,
     os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from openbandparams import *
-import string
+# import string
 
 # Print all parameters of all strained III-V zinc blende alloys
 params = {}
@@ -37,8 +37,8 @@ max_name_width = max([len(name) for name in names])
 max_desc_width = max([len(desc) for desc in descriptions])
 
 print('='*max_name_width+'   '+'='*max_desc_width)
-print('{}   {}'.format(string.ljust('Parameter', max_name_width),'Description'))
+print('{}   {}'.format(str.ljust('Parameter', max_name_width),'Description'))
 print('='*max_name_width+'   '+'='*max_desc_width)
 for name, desc in zip(names, descriptions):
-    print('{}   {}'.format(string.ljust(name, max_name_width),desc))
+    print('{}   {}'.format(str.ljust(name, max_name_width),desc))
 print('='*max_name_width+'   '+'='*max_desc_width)
